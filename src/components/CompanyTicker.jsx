@@ -1,0 +1,29 @@
+import React from 'react';
+import '../index.css';
+
+const CompanyTicker = () => {
+    const companies = [
+        { name: 'Company 1', logo: '/companies/company-1.webp' },
+        { name: 'Company 2', logo: '/companies/company-2.webp' },
+        { name: 'Company 3', logo: '/companies/company-3.webp' },
+        { name: 'Company 4', logo: '/companies/company-4.webp' },
+    ];
+
+    // Duplicate the list to create infinite scroll effect
+    const tickerItems = [...companies, ...companies, ...companies, ...companies];
+
+    return (
+        <section className="ticker-container">
+            <div className="ticker-mask"></div>
+            <div className="ticker-track">
+                {tickerItems.map((company, index) => (
+                    <div key={index} className="ticker-item">
+                        <img src={company.logo} alt={company.name} />
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+};
+
+export default CompanyTicker;
