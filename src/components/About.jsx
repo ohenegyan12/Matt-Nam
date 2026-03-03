@@ -1,12 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const About = () => {
+    const images = [
+        "/images/about-1.jpg",
+        "/images/about-2.jpg",
+        "/images/about-3.JPG"
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % images.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [images.length]);
+
     return (
         <section className="section bg-white" id="about">
             <div className="container">
                 <div className="grid grid-2 grid-about items-center">
-                    {/* Left Side: Image Carousel Mockup */}
+                    {/* Left Side: Image Carousel */}
                     <motion.div
                         className="about-image-container"
                         initial={{ opacity: 0, x: -50 }}
@@ -14,17 +29,33 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="about-image-card">
-                            <img
-                                src="/images/about-image-1.webp"
-                                alt="Matt's Journey"
-                            />
+                        <div className="about-image-card" style={{ position: 'relative', overflow: 'hidden' }}>
+                            <AnimatePresence mode='wait'>
+                                <motion.img
+                                    key={currentIndex}
+                                    src={images[currentIndex]}
+                                    alt={`About Matt ${currentIndex + 1}`}
+                                    initial={{ opacity: 0, scale: 1.1 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.8 }}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover'
+                                    }}
+                                />
+                            </AnimatePresence>
                         </div>
                         <div className="pagination-dots">
-                            <span className="dot active"></span>
-                            <span className="dot"></span>
-                            <span className="dot"></span>
-                            <span className="dot"></span>
+                            {images.map((_, index) => (
+                                <span
+                                    key={index}
+                                    className={`dot ${currentIndex === index ? 'active' : ''}`}
+                                    onClick={() => setCurrentIndex(index)}
+                                    style={{ cursor: 'pointer' }}
+                                ></span>
+                            ))}
                         </div>
                     </motion.div>
 
@@ -61,3 +92,4 @@ const About = () => {
 };
 
 export default About;
+
