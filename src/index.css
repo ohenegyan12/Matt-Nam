@@ -1,6 +1,12 @@
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :root {
   --font-main: 'Outfit', sans-serif;
   --color-dark: #0a0a0a;
@@ -21,7 +27,6 @@ body {
   font-family: var(--font-main);
   background-color: var(--color-light);
   color: var(--color-dark);
-  overflow-x: hidden;
 }
 
 /* Utilities */

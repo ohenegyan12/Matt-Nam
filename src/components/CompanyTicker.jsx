@@ -10,8 +10,10 @@ const CompanyTicker = () => {
         { name: 'Company 5', logo: '/companies/company-5.png' },
     ];
 
-    // Duplicate the list to create infinite scroll effect
-    const tickerItems = [...companies, ...companies, ...companies, ...companies];
+    // Duplicate the list to create a seamless infinite scroll effect
+    // CSS animation moves the track by -50%, so duplicating the items twice
+    // ensures that when it loops, the visible sequence continues without gaps.
+    const tickerItems = [...companies, ...companies];
 
     return (
         <section className="ticker-container">
