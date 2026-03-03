@@ -30,22 +30,15 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <div className="about-image-card" style={{ position: 'relative', overflow: 'hidden' }}>
-                            <AnimatePresence mode='wait'>
-                                <motion.img
-                                    key={currentIndex}
-                                    src={images[currentIndex]}
-                                    alt={`About Matt ${currentIndex + 1}`}
-                                    initial={{ opacity: 0, scale: 1.1 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.95 }}
-                                    transition={{ duration: 0.8 }}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover'
-                                    }}
-                                />
-                            </AnimatePresence>
+                            <img
+                                src={images[currentIndex]}
+                                alt={`About Matt ${currentIndex + 1}`}
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover'
+                                }}
+                            />
                         </div>
                         <div className="pagination-dots">
                             {images.map((_, index) => (
