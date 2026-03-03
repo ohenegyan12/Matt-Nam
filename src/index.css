@@ -120,8 +120,6 @@ body {
   background-color: #000;
   overflow: hidden;
   color: #fff;
-  z-index: 10;
-  /* Higher than ticker's 3 */
 }
 
 .hero-bg-wrapper {
@@ -424,7 +422,6 @@ body {
   background: #ffffff;
   padding: 5rem 0;
   width: 100%;
-  z-index: 3;
 }
 
 .ticker-mask {
