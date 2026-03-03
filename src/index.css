@@ -3,6 +3,14 @@
 
 html,
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#root,
+.App {
+  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
