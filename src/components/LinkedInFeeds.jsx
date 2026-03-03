@@ -321,7 +321,7 @@ const LinkedInFeeds = () => {
             </style>
 
             <div className="container">
-                <div className="updates-header mb-4 text-center">
+                <div className="updates-header mb-4">
                     <motion.h2
                         className="about-title"
                         initial={{ opacity: 0, y: 20 }}

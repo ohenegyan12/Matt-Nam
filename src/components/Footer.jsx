@@ -19,11 +19,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Center: Copyright */}
-                <div className="footer-center">
-                    <p>©2026 Matthew Nam. All rights reserved.</p>
-                </div>
-
                 {/* Right Side: Contact Details */}
                 <div className="footer-right">
                     <div className="contact-item">

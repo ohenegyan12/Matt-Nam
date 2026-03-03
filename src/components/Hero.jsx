@@ -4,70 +4,39 @@ import '../index.css';
 
 const Hero = () => {
     return (
-        <section
-            style={{
-                position: 'relative',
-                width: '100%',
-                backgroundColor: '#000',
-                overflow: 'hidden',
-                color: '#fff',
-                borderRadius: '0 0 100% 100% / 0 0 80px 80px',
-                zIndex: 2
-            }}
-        >
-            {/* Background Image - Drives section height */}
-            <img
-                src="/images/matt-hero.webp"
-                alt="Background"
-                style={{
-                    width: '100%',
-                    height: 'auto',
-                    display: 'block',
-                    objectFit: 'contain',
-                    objectPosition: 'top right'
-                }}
-            />
-
-            {/* Overlay Layer */}
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                background: 'linear-gradient(90deg, #000 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 60%, transparent 100%)',
-                zIndex: 1
-            }}></div>
+        <section className="hero-section">
+            <div className="hero-bg-wrapper">
+                {/* Background Image - Drives section height */}
+                <picture>
+                    <source media="(max-width: 768px)" srcSet="/images/hero-mobile.png" />
+                    <img
+                        src="/images/matt-hero.webp"
+                        alt="Background"
+                        className="hero-bg-img"
+                    />
+                </picture>
+                {/* Overlay Layer */}
+                <div className="hero-overlay"></div>
+            </div>
 
             {/* Navbar Layer */}
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', zIndex: 10 }}>
+            <div className="hero-navbar-wrapper">
                 <Navbar />
             </div>
 
             {/* Content Container */}
-            <div className="container" style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                zIndex: 5
-            }}>
-                <div style={{ maxWidth: '600px', paddingTop: '40px' }}>
+            <div className="container hero-content-container">
+                <div className="hero-content">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
+                        className="hero-logo-wrapper desktop-only"
                     >
                         <img
                             src="/logo-main.svg"
                             alt="Hero Logo"
-                            style={{
-                                height: '120px',
-                                marginBottom: '2rem'
-                            }}
+                            className="hero-logo-main"
                         />
                     </motion.div>
 
@@ -75,13 +44,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.6,
-                            opacity: 0.9,
-                            marginBottom: '3rem',
-                            maxWidth: '500px'
-                        }}
+                        className="hero-description"
                     >
                         I work at the intersection of strategy, technology, and growth, helping platforms, teams, and ideas evolve into systems that actually work.
                     </motion.p>
@@ -90,12 +53,19 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
-                        style={{ display: 'flex', gap: '1.5rem' }}
+                        className="hero-buttons"
                     >
-                        <a href="#portfolio" className="btn btn-primary" style={{ backgroundColor: '#fff', color: '#000', border: '1px solid #fff' }}>View Portfolio</a>
+                        <a href="#portfolio" className="btn btn-primary">View Portfolio</a>
                         <a href="#resume" className="btn btn-outline">Download Resume</a>
                     </motion.div>
                 </div>
+            </div>
+
+            {/* Curve at bottom */}
+            <div className="hero-curve">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
+                </svg>
             </div>
         </section>
     );

@@ -28,9 +28,11 @@ const Expertise = () => {
     return (
         <section className="section bg-white" id="expertise">
             <div className="container">
-                <div className="text-center mb-24">
+                <div className="expertise-header mb-24">
                     <span className="about-label">WHAT I DO</span>
-                    <h2 className="about-title" style={{ fontSize: '3rem' }}>Core Expertise</h2>
+                    <h2 className="about-title" style={{ fontSize: '3rem' }}>
+                        Core <br className="mobile-br" /> Expertise
+                    </h2>
                 </div>
 
                 <div className="expertise-grid">
