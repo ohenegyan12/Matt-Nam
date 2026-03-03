@@ -7,6 +7,7 @@ const CompanyTicker = () => {
         { name: 'Company 2', logo: '/companies/company-2.webp' },
         { name: 'Company 3', logo: '/companies/company-3.webp' },
         { name: 'Company 4', logo: '/companies/company-4.webp' },
+        { name: 'Company 5', logo: '/companies/company-5.png' },
     ];
 
     // Duplicate the list to create infinite scroll effect
