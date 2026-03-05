@@ -5,7 +5,8 @@ const About = () => {
     const images = [
         "/images/about-1.jpg",
         "/images/about-2.jpg",
-        "/images/about-3.JPG"
+        "/images/about-3.JPG",
+        "/images/about-me-4.png"
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
