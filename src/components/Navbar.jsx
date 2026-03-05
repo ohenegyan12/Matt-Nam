@@ -23,6 +23,7 @@ const Navbar = () => {
         { name: 'Expertise', href: '#expertise' },
         { name: 'Recognition', href: '#recognition' },
         { name: 'Updates', href: '#updates' },
+        { name: 'Impact', href: '/impact' },
     ];
 
     return (

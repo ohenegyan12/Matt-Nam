@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero';
 import CompanyTicker from './components/CompanyTicker';
 import About from './components/About';
@@ -7,8 +8,9 @@ import StrategicImpact from './components/StrategicImpact';
 import LinkedInFeeds from './components/LinkedInFeeds';
 import Interview from './components/Interview';
 import Footer from './components/Footer';
+import ImpactPage from './pages/ImpactPage';
 
-function App() {
+function Home() {
   return (
     <div className="App w-full">
       <Hero />
@@ -21,6 +23,15 @@ function App() {
       <Interview />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/impact" element={<ImpactPage />} />
+    </Routes>
   );
 }
 
