@@ -18,7 +18,7 @@ const StrategicImpact = () => {
         },
         {
             logo: "/images/doceree.png",
-            role: "Global Head of Sales",
+            role: "Head of Platform Sales",
             title: "Doceree Scale-Up",
             description: "Pioneered the development of a comprehensive healthcare media ecosystem and scaled global operations.",
             tags: ["Global Strategy", "AI", "Startup Scale"],

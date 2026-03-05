@@ -35,6 +35,11 @@ const Expertise = () => {
                     </h2>
                 </div>
 
+                {/* Mobile-only image: shown between title and cards */}
+                <div className="expertise-mobile-image">
+                    <img src="/images/what-i-do.webp" alt="What I Do" />
+                </div>
+
                 <div className="expertise-grid">
                     {/* Left Column */}
                     <div className="expertise-side-col">

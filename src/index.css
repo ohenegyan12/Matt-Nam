@@ -595,6 +595,10 @@ body {
   text-align: center;
 }
 
+.expertise-mobile-image {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .expertise-header {
     text-align: left;
@@ -695,6 +699,18 @@ body {
 
   .expertise-card h4 {
     font-size: 1.25rem;
+  }
+
+  .expertise-mobile-image {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .expertise-mobile-image img {
+    width: 100%;
+    border-radius: 1.2rem;
+    object-fit: cover;
+    max-height: 280px;
   }
 }
 

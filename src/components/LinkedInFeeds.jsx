@@ -21,7 +21,7 @@ const getLinkedInPostUrl = (embedSrc) => {
 const LinkedInFallbackCard = ({ post, index }) => {
     return (
         <motion.a
-            href={getLinkedInPostUrl(post.src)}
+            href={post.url}
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin-card linkedin-fallback-card"
@@ -226,31 +226,37 @@ const LinkedInFeeds = () => {
     const posts = [
         {
             src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7429902014857359360",
+            url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7429902014857359360",
             height: "849",
             preview: "Thanks a16z speedrun and Google for an incredible week in San Francisco. A few key takeaways from the week: Expert context will define the next winners. The differentiator in this wave of AI adoption is domain context..."
         },
         {
             src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7429272191264935937",
+            url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7429272191264935937",
             height: "828",
             preview: "It's a wrap! Last week I spoke at Google NY on how intelligent, virtualized supply chains are reshaping global commerce. We discussed how this shift is already underway, and two themes stood out..."
         },
         {
             src: "https://www.linkedin.com/embed/feed/update/urn:li:share:7429190512546521088",
+            url: "https://www.linkedin.com/feed/update/urn:li:share:7429190512546521088",
             height: "670",
             preview: "Energized after speaking at PayPal Dev Day! It was incredible to share the stage with sharp leaders from Google, Mesh, exploring how technology is reshaping commerce, connectivity, and ownership."
         },
         {
             src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7386048351978553344",
+            url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7386048351978553344",
             height: "628",
             preview: "Appreciate PayPal for the invitation and the opportunity to contribute to the dialogue. Exploring the intersection of health media, adtech and supply chain innovation."
         },
         {
             src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7379505327773474816",
+            url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7379505327773474816",
             height: "628",
             preview: "HealthLink Dimensions — diving into what clinicians expect today and what it takes to deliver meaningful value at scale. Watch the full episode now, and stay tuned! Episode 2 is already in production!"
         },
         {
             src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7325519620382023680",
+            url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7325519620382023680",
             height: "628",
             preview: "Exploring how innovations like PYUSD, Web3, and emerging agentic systems are rapidly reshaping the way brands engage, transact, and scale. Not in the future, but now."
         }
