@@ -67,15 +67,11 @@ const About = () => {
 
                         <div className="about-description">
                             <p className="about-text">
-                                My journey hasn’t followed a straight line, and I’m glad it didn’t.
-                                I began in spaces rooted in science, health, and human outcomes,
-                                where precision mattered and impact was tangible.
+                                My journey hasn’t followed a straight line, and I’m glad it didn’t. I began in spaces rooted in science, health, and human outcomes, where precision mattered and impact was tangible.
                             </p>
                             <p className="about-text">
-                                Over time, I found myself drawn to larger systems: platforms, products,
-                                and commercial models that shape how value moves. What ties everything
-                                together is a fascination with connection, people to platforms, strategy
-                                to execution, vision to reality.
+
+                                Over time, I found myself drawn to larger systems: platforms, products, and commercial models that shape how value moves. What ties everything together is a fascination with connection; people to platforms, strategy to execution, vision to reality.
                             </p>
                         </div>
                     </motion.div>

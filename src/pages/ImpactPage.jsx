@@ -47,6 +47,41 @@ const ImpactPage = () => {
                 </div>
             </section>
 
+            {/* ── SECTION: Why Farmers? ── */}
+            <section className="section bg-white impact-section">
+                <div className="container">
+                    <div className="impact-content-grid impact-content-grid--reverse">
+                        {/* Text left */}
+                        <motion.div
+                            className="impact-text-block"
+                            initial={{ opacity: 0, x: -40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="impact-section-title">Why Farmers?</h2>
+                            <p className="impact-section-text">
+                                The people who produce coffee are often the furthest from the systems that control how it moves through the world.
+                            </p>
+                            <p className="impact-section-text">
+                                Spending time with farmers revealed how complex and fragmented the supply chain behind coffee really is. That realization shaped my focus on building more connected systems that make sourcing, production, and distribution easier for everyone involved.
+                            </p>
+                        </motion.div>
+
+                        {/* Image right */}
+                        <motion.div
+                            className="impact-image-wrap"
+                            initial={{ opacity: 0, x: 40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <img src="/images/why-farmers.webp" alt="Why Farmers?" className="impact-img" />
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
             {/* ── SECTION 1: Working Directly With Farmers ── */}
             <section className="section bg-white impact-section">
                 <div className="container">
@@ -72,13 +107,14 @@ const ImpactPage = () => {
                         >
                             <h2 className="impact-section-title">Working Directly With Farmers</h2>
                             <p className="impact-section-text">
-                                I created Win Win Coffee, a coffee brand that doesn't only believe in spending time with producers, but in truly connecting with the people who grow the beans that make every cup possible.
+                                I founded Win Win Coffee to stay closely connected to the people who grow the beans behind every cup. Spending time on farms has given me a firsthand understanding of the work, risk, and knowledge involved in producing great coffee.
                             </p>
                             <p className="impact-section-text">
-                                When I visit farms in Colombia, I'm not just sourcing coffee. I'm learning from farmers, understanding their challenges, and building real relationships that go far beyond the supply chain.
+                                When I visit farms, the goal isn’t simply to source coffee. It’s to listen, learn, and build relationships with the producers whose work defines the quality of what we drink.
                             </p>
                             <p className="impact-section-text">
-                                These connections allow us to support sustainable practices and help strengthen the communities behind the coffee.
+
+                                Those relationships continue to shape how I think about sourcing, transparency, and the broader systems that connect producers to the global coffee market.
                             </p>
                         </motion.div>
                     </div>
@@ -97,12 +133,15 @@ const ImpactPage = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="impact-section-title">Supporting Women in Coffee</h2>
+                            <h2 className="impact-section-title">Supporting Women Farmers</h2>
                             <p className="impact-section-text">
-                                During my visits to coffee communities, I've met incredible women who are at the heart of coffee production, cultivating the farms, managing harvests, and supporting their families through coffee.
+                                In farming communities around the world, women often carry much of the responsibility for agricultural work while remaining the least visible in the broader system.
                             </p>
                             <p className="impact-section-text">
-                                Working alongside them has shown me that empowering women in coffee strengthens entire communities. Through Win Win Coffee, my goal is to highlight their work and support opportunities that allow these producers to grow and thrive.
+                                Meeting and working alongside these producers changed how I think about opportunity in agriculture. When women have access to resources, markets, and recognition, the effects reach far beyond the farm.
+                            </p>
+                            <p className="impact-section-text">
+                                Supporting and highlighting their work continues to shape how I approach the projects and partnerships I build.
                             </p>
                         </motion.div>
 
@@ -121,7 +160,7 @@ const ImpactPage = () => {
             </section>
 
             {/* ── SECTION 3: From Farm to Cup ── */}
-            <section className="section bg-white impact-section impact-farmtocup-section">
+            <section className="section bg-white impact-section">
                 <div className="container">
                     <motion.h2
                         className="impact-farmtocup-title"
@@ -140,26 +179,46 @@ const ImpactPage = () => {
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
                         <p className="impact-section-text">
-                            For me, coffee is about more than flavor, it's about honoring the people behind it. Every time we evaluate beans through cupping and quality testing, I'm reminded of the dedication and care farmers put into every harvest.
+                            Coffee offers a clear window into how supply chains work. A single cup depends on farmers, processors, exporters, roasters, and distributors working in coordination.
                         </p>
                         <p className="impact-section-text">
-                            From the farm to the final cup, my mission with Win Win Coffee is to ensure that the work of these communities is respected, recognized, and shared with the world.
+                            Evaluating coffee through cupping is one small step in that journey. It’s a reminder that every finished product reflects a network of people and decisions long before it reaches the consumer.
+                        </p>
+                        <p className="impact-section-text">
+                            That perspective continues to shape how I approach supply chains and the systems that connect them.
                         </p>
                     </motion.div>
                 </div>
+            </section>
 
-                {/* Full-width image */}
+            {/* ── SECTION: Celebrating Farmer Excellence ── */}
+            <section className="impact-flush-section bg-dark">
+                {/* Image left - flush to left/top/bottom */}
                 <motion.div
-                    className="impact-farmtocup-img-wrap"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    className="flush-image-wrap"
+                    initial={{ opacity: 0, x: -40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    transition={{ duration: 0.8 }}
                 >
-                    <picture>
-                        <source media="(max-width: 768px)" srcSet="/images/fromfarm-mobile.webp" />
-                        <img src="/images/fromfarm.webp" alt="From Farm to Cup" className="impact-farmtocup-img" />
-                    </picture>
+                    <img src="/images/farmer-exellence.webp" alt="Celebrating Farmer Excellence" className="flush-img" />
+                </motion.div>
+
+                {/* Content right */}
+                <motion.div
+                    className="flush-content-block"
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h2 className="impact-section-title">Celebrating Farmer Excellence</h2>
+                    <p className="impact-section-text">
+                        Judging Colombia’s National Coffee Competition was one of the most meaningful moments of my time working in coffee. Watching producers receive national recognition for the quality of their beans was a powerful reminder that behind every great coffee is a family, years of experience, and a deep commitment to craft.
+                    </p>
+                    <p className="impact-section-text">
+                        Experiences like this continue to shape my mission with Win Win Coffee: to ensure the people behind exceptional coffee are recognized and valued globally.
+                    </p>
                 </motion.div>
             </section>
 
@@ -171,22 +230,6 @@ const ImpactPage = () => {
                             '/images/Rectangle-52.webp',
                             '/images/Rectangle-53.webp',
                             '/images/Rectangle-55.webp',
-                        ],
-                        direction: 'left',
-                    },
-                    {
-                        images: [
-                            '/images/impact-hero.webp',
-                            '/images/Rectangle-58.webp',
-                            '/images/Rectangle-56.webp',
-                        ],
-                        direction: 'right',
-                    },
-                    {
-                        images: [
-                            '/images/Rectangle-59.webp',
-                            '/images/Rectangle-60.webp',
-                            '/images/matt-farm.webp',
                         ],
                         direction: 'left',
                     },
